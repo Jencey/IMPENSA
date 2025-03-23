@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPENSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold text-center mb-4">IMPENSA</h1>
+
+        <div class="mb-4">
+            <h2 class="text-lg font-semibold">Your Balance</h2>
+            <p id="balance" class="text-2xl font-bold text-gray-800">$0.00</p>
+        </div>
+
+        <div class="flex justify-between bg-gray-200 p-4 rounded-md mb-4">
+            <div class="text-center">
+                <h3 class="font-semibold">Income</h3>
+                <p id="money-plus" class="text-green-600 font-bold">$0.00</p>
+            </div>
+            <div class="text-center">
+                <h3 class="font-semibold">Expense</h3>
+                <p id="money-minus" class="text-red-600 font-bold">$0.00</p>
+            </div>
+        </div>
+
+        <h3 class="font-semibold">History</h3>
+        <ul id="list" class="space-y-2 my-3">
+            <!-- Transactions will be added here -->
+        </ul>
+
+        <h3 class="font-semibold">Add New Transaction</h3>
+        <form id="form" class="mt-2">
+            <div class="mb-2">
+                <label class="block text-sm font-medium">Text</label>
+                <input type="text" id="text" class="w-full p-2 border rounded-md" placeholder="Enter text..." required>
+            </div>
+            <div class="mb-2">
+                <label class="block text-sm font-medium">Amount <br> (negative - expense, positive - income)</label>
+                <input type="number" id="amount" class="w-full p-2 border rounded-md" placeholder="Enter amount..." required>
+            </div>
+            <button class="w-full bg-green-300 text-white p-2 rounded-md hover:bg-green-700">Add Transaction</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
